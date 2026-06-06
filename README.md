@@ -29,3 +29,11 @@ cd tb3_clip_nav
 mkdir -p scripts
 nano scripts/opencv_camera_pub.py
 
+//catkin make
+chmod +x ~/catkin_ws/src/tb3_clip_nav/scripts/opencv_camera_pub.py
+cd ~/catkin_ws
+catkin_make
+source devel/setup.bash
+
+//run opencv code
+rosrun tb3_clip_nav opencv_camera_pub.py _device:=0
